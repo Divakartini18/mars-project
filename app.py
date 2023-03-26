@@ -19,8 +19,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-   image_url = url_for('static', filename='mars.jpg')
-   return render_template('index.html', image_url=image_url)
+   return render_template('index.html')
 
 @app.route("/mars", methods=["POST"])
 def web_mars_post():
